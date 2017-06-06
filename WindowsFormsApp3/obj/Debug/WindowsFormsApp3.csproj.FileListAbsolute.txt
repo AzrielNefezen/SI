@@ -1,0 +1,13 @@
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.Cache
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+c:\users\azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\Azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\Azriel\documents\visual studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+C:\Users\Azriel\Documents\Visual Studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojResolveAssemblyReference.cache
+C:\Users\Azriel\Documents\Visual Studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\SwiPlCs.dll
+C:\Users\Azriel\Documents\Visual Studio 2017\Projects\WindowsFormsApp3\WindowsFormsApp3\bin\Debug\SwiPlCs.xml
