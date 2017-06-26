@@ -137,14 +137,14 @@ namespace WindowsFormsApp3
 
             Process proc = new System.Diagnostics.Process();
             proc.StartInfo.FileName = @"cmd.exe";
-            proc.StartInfo.Arguments = "/K cd C:\\Program Files (x86)\\swipl\\bin & swipl.exe -q -f " + LocalPath + "\\vmtlFirst.pl" + '\u0022';
+            proc.StartInfo.Arguments = "/K cd C:\\Program Files (x86)\\swipl\\bin & swipl.exe -q -f " + LocalPath + "\\vamtl.pl" + '\u0022';
             proc.StartInfo.UseShellExecute = false;
             proc.StartInfo.RedirectStandardOutput = true;
             proc.StartInfo.RedirectStandardInput = true;
             proc.StartInfo.CreateNoWindow = true;
             proc.Start();
             proc.StandardInput.WriteLine("set_prolog_flag(answer_write_options,[quoted(true),portray(true),spacing(next_argument)]).");
-            proc.StandardInput.WriteLine("startVMTLSolvingProcess([" + edges + "," + vertexes + ",end_of_file],R)");
+            proc.StandardInput.WriteLine("startVAMTL([" + edges + "," + vertexes + ",end_of_file],R)");
             proc.StandardInput.WriteLine(".");
             proc.StandardInput.Close();
             proc.WaitForExit();

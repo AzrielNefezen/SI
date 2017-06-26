@@ -1,0 +1,7 @@
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/obj/Debug/.NETFramework,Version=v4.7.AssemblyAttribute.cs
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.Form1.resources
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.Properties.Resources.resources
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.exe
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/obj/Debug/WindowsFormsApp3.pdb
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/bin/Debug/Microsoft.VisualBasic.PowerPacks.dll
+/home/lolosz/Pulpit/SI/WindowsFormsApp3/bin/Debug/SwiPlCs.dll
