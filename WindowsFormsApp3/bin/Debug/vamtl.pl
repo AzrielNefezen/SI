@@ -29,10 +29,10 @@ wezZmienna(Index, [H|T], Wynik, N):-
     wezZmienna(Index, T, Wynik, N1).
  
  
-DodajDoListy(L,NL):-
+dodajDoListy(L,NL):-
     append(L, [], NL).
  
-DodajDoListy(L1, L2, NL):-
+dodajDoListy(L1, L2, NL):-
     append(L1, L2, NL).
  
 czyElementJestUnikalny([H|_], L2):-
@@ -43,10 +43,10 @@ czyElementJestUnikalny([H|_], L2):-
 dodajDoListyUstalonej(L1, L2, NL):-
     nonvar(L1)->
     (   nonvar(L2)->
-        DodajDoListy(L2, L1, NL);
-        DodajDoListy(L1, NL)
+        dodajDoListy(L2, L1, NL);
+        dodajDoListy(L1, NL)
     );
-    DodajDoListy(L2,NL).
+    dodajDoListy(L2,NL).
  
 mapaListyAtomow([], Vs, Vs, Map1, Map1, Map2, Map2).
 mapaListyAtomow([], Vs, Vs, Map1Out, Map1In, Map2Out, Map2In, Map1Out, Map2Out).
@@ -67,16 +67,16 @@ mapaListyAtomow([AtomsH|AtomsT], TempVs, Vs, TempMap1, Map1, TempMap2, Map2, Map
  
     atomDoZmiennejMapper(AtomsH, R, Map1, Map2),
     (czyElementJestUnikalny([AtomsH], TempMap1)->
-    DodajDoListy([AtomsH], TempMap1, TMP1),
-    DodajDoListy(R, TempMap2, TMP2);
-    DodajDoListy(TempMap1, TMP1),
-    DodajDoListy(TempMap2, TMP2)),
+    dodajDoListy([AtomsH], TempMap1, TMP1),
+    dodajDoListy(R, TempMap2, TMP2);
+    dodajDoListy(TempMap1, TMP1),
+    dodajDoListy(TempMap2, TMP2)),
  
     %list_to_set(BufTMP1, TMP1),
  
  
-    DodajDoListy(R,NL),
-    DodajDoListy(TempVs,NL,VSNL),
+    dodajDoListy(R,NL),
+    dodajDoListy(TempVs,NL,VSNL),
     mapaListyAtomow(AtomsT, VSNL, Vs, TMP1, Map1, TMP2, Map2, Map1out, Map2out).
  
     findAdjacentEdgesForVertexIncludingVertex(V, R):-
@@ -84,7 +84,7 @@ mapaListyAtomow([AtomsH|AtomsT], TempVs, Vs, TempMap1, Map1, TempMap2, Map2, Map
     append([V], Z, R).
  
  
-rozwiarzVAMTL(L,Wynik):-
+rozwiazVAMTL(L,Wynik):-
     N is 0,
     utworzSasiednieDlaWierzcholkow(L, OBuf, O),
     %writeln(O),
@@ -100,8 +100,8 @@ przypiszAtomyDoListyList(LoL, VsLoLOut, Map1Out, Map2Out):-
 przypiszAtomyDoListyList([H|T], VsLoLOut, Map1Out, Map2Out, VsBuf, Map1Buf, Map2Buf):-
     mapaListyAtomow(H, Vs, Map1Buf, Map2Buf, Map1OutBuf, Map2OutBuf),
     (
-        nonvar(VsBuf)->DodajDoListy([Vs], VsBuf, VsBufOut);
-        DodajDoListy([Vs], VsBufOut)
+        nonvar(VsBuf)->dodajDoListy([Vs], VsBuf, VsBufOut);
+        dodajDoListy([Vs], VsBufOut)
     ),
     przypiszAtomyDoListyList(T, VsLoLOut, Map1Out, Map2Out, VsBufOut, Map1OutBuf, Map2OutBuf).
  
@@ -110,7 +110,7 @@ przypiszAtomyDoListyList([], VsLoLOut, Map1Out, Map2Out, VsLoLOut, Map1Out, Map2
 utworzSasiednieDlaWierzcholkow([H|T], OBuf, O):-
     findAdjacentEdgesForVertexIncludingVertex(H, R),
     (
-        nonvar(OBuf)-> DodajDoListy([R], OBuf, R1);
+        nonvar(OBuf)-> dodajDoListy([R], OBuf, R1);
         R1 = [R]
     ),
     utworzSasiednieDlaWierzcholkow(T, R1, O).
@@ -142,7 +142,7 @@ sumujWszystkie([], S).
 startVAMTL(Lines,Wynik):-
     %writeln(Lines),
     zbudujasserts(Lines, L),!,
-    rozwiarzVAMTL(L, Wynik),
+    rozwiazVAMTL(L, Wynik),
     retractall(edge(_,_,_)).
  
 zbudujasserts([H|T], L):-
